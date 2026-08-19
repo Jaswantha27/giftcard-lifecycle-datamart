@@ -83,6 +83,8 @@ the SQL that implements it, so the reasoning is auditable, not just the output.
 - Cohort redemption typically plateaus between 50-80% of issued value by
   month 12, depending on the cohort
 
+![Cohort heatmap](output/dashboard_cohort_heatmap.png)
+
 ## Tech stack
 
 - **PostgreSQL** (via Docker Compose) — schema, indexing, CTE-based mart
