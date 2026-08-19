@@ -97,7 +97,7 @@ def scenario_full_redemption_single(card, n):
 def scenario_partial_redemptions(card, n):
     """Multiple partial redemptions draining the card over time."""
     remaining = card.issued_amount
-    n_txns = random.randint(2, 4)
+    n_txns = random.randint(3, 5)
     months_elapsed = 0
     for i in range(n_txns):
         months_elapsed += random.randint(1, 5)
@@ -177,9 +177,9 @@ def scenario_expiring_breakage(card, n):
 
 
 SCENARIOS = [
-    (scenario_full_redemption_single, 0.28),
-    (scenario_partial_redemptions, 0.24),
-    (scenario_never_redeemed, 0.18),
+    (scenario_full_redemption_single, 0.25),
+    (scenario_partial_redemptions, 0.30),
+    (scenario_never_redeemed, 0.17),
     (scenario_same_month_redemption, 0.08),
     (scenario_long_dormancy, 0.08),
     (scenario_voided_card, 0.04),

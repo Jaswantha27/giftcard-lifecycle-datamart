@@ -75,10 +75,10 @@ the SQL that implements it, so the reasoning is auditable, not just the output.
 
 ## Results (on the synthetic dataset)
 
-- 3,200 cards issued ($292,641 total, across USD/EUR/GBP), 3,556 redemption
+- 3,200 cards issued ($292,701 total, across USD/EUR/GBP), 4,444 redemption
   transactions
 - 711 cohort-month rows in the resulting data mart
-- **12.7%** breakage rate — consistent with typical gift card program
+- **11.9%** breakage rate — consistent with typical gift card program
   breakage rates in the 5-15% range
 - Cohort redemption typically plateaus between 50-80% of issued value by
   month 12, depending on the cohort
@@ -139,8 +139,8 @@ python3 local_test.py
 ```
 
 This produces the same `fact_giftcard_cohort_monthly.csv` and totals as the
-Postgres path (verified: 711 cohort-month rows / $292,641 total issued /
-$37,109 total breakage). It's a convenience path for local testing and
+Postgres path (verified: 711 cohort-month rows / $292,701 total issued /
+$34,827 total breakage). It's a convenience path for local testing and
 review; the Postgres + Docker Compose setup remains the primary,
 production-representative version of this project.
 
